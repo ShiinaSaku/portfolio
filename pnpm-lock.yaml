@@ -24,14 +24,14 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0(@babel/parser@7.29.0)(change-case@5.4.4)(db0@0.3.4(better-sqlite3@12.4.1))(embla-carousel@8.6.0)(ioredis@5.9.3)(magicast@0.5.2)(typescript@5.9.3)(vite@7.3.1(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.2))(vue-router@4.6.4(vue@3.5.28(typescript@5.9.3)))(vue@3.5.28(typescript@5.9.3))(zod@3.25.76)
       '@vueuse/nuxt':
-        specifier: ^13.9.0
-        version: 13.9.0(magicast@0.5.2)(nuxt@4.3.1(@parcel/watcher@2.5.1)(@types/node@24.7.0)(@vue/compiler-sfc@3.5.28)(better-sqlite3@12.4.1)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.4.1))(eslint@9.38.0(jiti@2.6.1))(ioredis@5.9.3)(lightningcss@1.30.2)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.57.1)(terser@5.44.0)(typescript@5.9.3)(vite@7.3.1(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.2))(vue-tsc@3.1.2(typescript@5.9.3))(yaml@2.8.2))(vue@3.5.28(typescript@5.9.3))
+        specifier: ^14.2.1
+        version: 14.2.1(magicast@0.5.2)(nuxt@4.3.1(@parcel/watcher@2.5.1)(@types/node@24.7.0)(@vue/compiler-sfc@3.5.28)(better-sqlite3@12.4.1)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.4.1))(eslint@9.38.0(jiti@2.6.1))(ioredis@5.9.3)(lightningcss@1.30.2)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.57.1)(terser@5.44.0)(typescript@5.9.3)(vite@7.3.1(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.2))(vue-tsc@3.1.2(typescript@5.9.3))(yaml@2.8.2))(vue@3.5.28(typescript@5.9.3))
       better-sqlite3:
         specifier: ^12.4.1
         version: 12.4.1
       motion-v:
         specifier: ^1.7.3
-        version: 1.7.3(@vueuse/core@14.0.0(vue@3.5.28(typescript@5.9.3)))(vue@3.5.28(typescript@5.9.3))
+        version: 1.7.3(@vueuse/core@14.2.1(vue@3.5.28(typescript@5.9.3)))(vue@3.5.28(typescript@5.9.3))
       nuxt:
         specifier: ^4.3.1
         version: 4.3.1(@parcel/watcher@2.5.1)(@types/node@24.7.0)(@vue/compiler-sfc@3.5.28)(better-sqlite3@12.4.1)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.4.1))(eslint@9.38.0(jiti@2.6.1))(ioredis@5.9.3)(lightningcss@1.30.2)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.57.1)(terser@5.44.0)(typescript@5.9.3)(vite@7.3.1(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.2))(vue-tsc@3.1.2(typescript@5.9.3))(yaml@2.8.2)
@@ -2242,8 +2242,8 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
-  '@vueuse/core@14.0.0':
-    resolution: {integrity: sha512-d6tKRWkZE8IQElX2aHBxXOMD478fHIYV+Dzm2y9Ag122ICBpNKtGICiXKOhWU3L1kKdttDD9dCMS4bGP3jhCTQ==}
+  '@vueuse/core@14.2.1':
+    resolution: {integrity: sha512-3vwDzV+GDUNpdegRY6kzpLm4Igptq+GA0QkJ3W61Iv27YWwW/ufSlOfgQIpN6FZRMG0mkaz4gglJRtq5SeJyIQ==}
     peerDependencies:
       vue: ^3.5.0
 
@@ -2298,11 +2298,11 @@ packages:
   '@vueuse/metadata@13.9.0':
     resolution: {integrity: sha512-1AFRvuiGphfF7yWixZa0KwjYH8ulyjDCC0aFgrGRz8+P4kvDFSdXLVfTk5xAN9wEuD1J6z4/myMoYbnHoX07zg==}
 
-  '@vueuse/metadata@14.0.0':
-    resolution: {integrity: sha512-6yoGqbJcMldVCevkFiHDBTB1V5Hq+G/haPlGIuaFZHpXC0HADB0EN1ryQAAceiW+ryS3niUwvdFbGiqHqBrfVA==}
+  '@vueuse/metadata@14.2.1':
+    resolution: {integrity: sha512-1ButlVtj5Sb/HDtIy1HFr1VqCP4G6Ypqt5MAo0lCgjokrk2mvQKsK2uuy0vqu/Ks+sHfuHo0B9Y9jn9xKdjZsw==}
 
-  '@vueuse/nuxt@13.9.0':
-    resolution: {integrity: sha512-n/9BRU3nLl2mVI6rYbB3jOctCmQD0xT799hXPCwCn1PyvK7r6O9Nt1dxfVCMfKCDAiCi8Fz2IqPC6Zs2Dv1pVA==}
+  '@vueuse/nuxt@14.2.1':
+    resolution: {integrity: sha512-DHgFMUpyH98M1YM9pbnRjFXMAMKEsHntJeOp8rOXs8QN2cvJBzEZ+TTWIBSPESNFOEwM02RA6BDsaTL35OK4Mw==}
     peerDependencies:
       nuxt: ^3.0.0 || ^4.0.0-0
       vue: ^3.5.0
@@ -2318,8 +2318,8 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
-  '@vueuse/shared@14.0.0':
-    resolution: {integrity: sha512-mTCA0uczBgurRlwVaQHfG0Ja7UdGe4g9mwffiJmvLiTtp1G4AQyIjej6si/k8c8pUwTfVpNufck+23gXptPAkw==}
+  '@vueuse/shared@14.2.1':
+    resolution: {integrity: sha512-shTJncjV9JTI4oVNyF1FQonetYAiTBd+Qj7cY89SWbXSkx7gyhrgtEdF2ZAVWS1S3SHlaROO6F2IesJxQEkZBw==}
     peerDependencies:
       vue: ^3.5.0
 
@@ -8421,11 +8421,11 @@ snapshots:
       '@vueuse/shared': 13.9.0(vue@3.5.28(typescript@5.9.3))
       vue: 3.5.28(typescript@5.9.3)
 
-  '@vueuse/core@14.0.0(vue@3.5.28(typescript@5.9.3))':
+  '@vueuse/core@14.2.1(vue@3.5.28(typescript@5.9.3))':
     dependencies:
       '@types/web-bluetooth': 0.0.21
-      '@vueuse/metadata': 14.0.0
-      '@vueuse/shared': 14.0.0(vue@3.5.28(typescript@5.9.3))
+      '@vueuse/metadata': 14.2.1
+      '@vueuse/shared': 14.2.1(vue@3.5.28(typescript@5.9.3))
       vue: 3.5.28(typescript@5.9.3)
 
   '@vueuse/integrations@13.9.0(change-case@5.4.4)(fuse.js@7.1.0)(vue@3.5.28(typescript@5.9.3))':
@@ -8443,13 +8443,13 @@ snapshots:
 
   '@vueuse/metadata@13.9.0': {}
 
-  '@vueuse/metadata@14.0.0': {}
+  '@vueuse/metadata@14.2.1': {}
 
-  '@vueuse/nuxt@13.9.0(magicast@0.5.2)(nuxt@4.3.1(@parcel/watcher@2.5.1)(@types/node@24.7.0)(@vue/compiler-sfc@3.5.28)(better-sqlite3@12.4.1)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.4.1))(eslint@9.38.0(jiti@2.6.1))(ioredis@5.9.3)(lightningcss@1.30.2)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.57.1)(terser@5.44.0)(typescript@5.9.3)(vite@7.3.1(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.2))(vue-tsc@3.1.2(typescript@5.9.3))(yaml@2.8.2))(vue@3.5.28(typescript@5.9.3))':
+  '@vueuse/nuxt@14.2.1(magicast@0.5.2)(nuxt@4.3.1(@parcel/watcher@2.5.1)(@types/node@24.7.0)(@vue/compiler-sfc@3.5.28)(better-sqlite3@12.4.1)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.4.1))(eslint@9.38.0(jiti@2.6.1))(ioredis@5.9.3)(lightningcss@1.30.2)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.57.1)(terser@5.44.0)(typescript@5.9.3)(vite@7.3.1(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.2))(vue-tsc@3.1.2(typescript@5.9.3))(yaml@2.8.2))(vue@3.5.28(typescript@5.9.3))':
     dependencies:
-      '@nuxt/kit': 3.19.2(magicast@0.5.2)
-      '@vueuse/core': 13.9.0(vue@3.5.28(typescript@5.9.3))
-      '@vueuse/metadata': 13.9.0
+      '@nuxt/kit': 4.3.1(magicast@0.5.2)
+      '@vueuse/core': 14.2.1(vue@3.5.28(typescript@5.9.3))
+      '@vueuse/metadata': 14.2.1
       local-pkg: 1.1.2
       nuxt: 4.3.1(@parcel/watcher@2.5.1)(@types/node@24.7.0)(@vue/compiler-sfc@3.5.28)(better-sqlite3@12.4.1)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.4.1))(eslint@9.38.0(jiti@2.6.1))(ioredis@5.9.3)(lightningcss@1.30.2)(magicast@0.5.2)(optionator@0.9.4)(rollup@4.57.1)(terser@5.44.0)(typescript@5.9.3)(vite@7.3.1(@types/node@24.7.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.2))(vue-tsc@3.1.2(typescript@5.9.3))(yaml@2.8.2)
       vue: 3.5.28(typescript@5.9.3)
@@ -8473,7 +8473,7 @@ snapshots:
     dependencies:
       vue: 3.5.28(typescript@5.9.3)
 
-  '@vueuse/shared@14.0.0(vue@3.5.28(typescript@5.9.3))':
+  '@vueuse/shared@14.2.1(vue@3.5.28(typescript@5.9.3))':
     dependencies:
       vue: 3.5.28(typescript@5.9.3)
 
@@ -10704,9 +10704,9 @@ snapshots:
       - react
       - react-dom
 
-  motion-v@1.7.3(@vueuse/core@14.0.0(vue@3.5.28(typescript@5.9.3)))(vue@3.5.28(typescript@5.9.3)):
+  motion-v@1.7.3(@vueuse/core@14.2.1(vue@3.5.28(typescript@5.9.3)))(vue@3.5.28(typescript@5.9.3)):
     dependencies:
-      '@vueuse/core': 14.0.0(vue@3.5.28(typescript@5.9.3))
+      '@vueuse/core': 14.2.1(vue@3.5.28(typescript@5.9.3))
       framer-motion: 12.23.12
       hey-listen: 1.0.8
       motion-dom: 12.23.12
