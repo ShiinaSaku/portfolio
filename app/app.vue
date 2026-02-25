@@ -1,64 +1,42 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
+const { site } = useAppConfig()
 
-const color = computed(() => colorMode.value === 'dark' ? '#020618' : 'white')
+const themeColor = computed(() => colorMode.value === 'dark' ? '#09090B' : '#FFFBEB')
 
 useHead({
+  htmlAttrs: {
+    lang: 'en'
+  },
+  link: [
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+    { rel: 'icon', sizes: '32x32', href: '/favicon-32x32.png' },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+    { rel: 'manifest', href: '/site.webmanifest' }
+  ],
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { key: 'theme-color', name: 'theme-color', content: color }
-  ],
-  link: [
-    { rel: 'icon', href: '/favicon.ico' }
-  ],
-  htmlAttrs: {
-    lang: 'en'
-  }
+    { key: 'theme-color', name: 'theme-color', content: themeColor }
+  ]
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt Portfolio Template',
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png',
-  twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png',
-  twitterCard: 'summary_large_image'
+  title: site.title,
+  titleTemplate: `%s | ${site.name}`,
+  ogSiteName: site.name,
+  description: site.description,
+  ogDescription: site.description,
+  ogImage: '/og-image.png',
+  twitterCard: 'summary_large_image',
+  twitterImage: '/og-image.png'
 })
-
-const [{ data: navigation }, { data: files }] = await Promise.all([
-  useAsyncData('navigation', () => {
-    return Promise.all([
-      queryCollectionNavigation('blog')
-    ])
-  }, {
-    transform: data => data.flat()
-  }),
-  useLazyAsyncData('search', () => {
-    return Promise.all([
-      queryCollectionSearchSections('blog')
-    ])
-  }, {
-    server: false,
-    transform: data => data.flat()
-  })
-])
 </script>
 
 <template>
   <UApp>
     <NuxtLayout>
-      <UMain class="relative">
-        <NuxtPage />
-      </UMain>
+      <NuxtPage />
     </NuxtLayout>
-
-    <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        :navigation="navigation"
-        shortcut="meta_k"
-        :links="navLinks"
-        :fuse="{ resultLimit: 42 }"
-      />
-    </ClientOnly>
   </UApp>
 </template>

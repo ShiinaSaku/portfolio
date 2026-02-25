@@ -1,15 +1,17 @@
 <script setup lang="ts">
+import { Button } from '@/components/ui/button'
+
 const colorMode = useColorMode()
 
-const nextTheme = computed(() => (colorMode.value === 'dark' ? 'light' : 'dark'))
+const nextTheme = computed(() => colorMode.value === 'dark' ? 'light' : 'dark')
 
-const switchTheme = () => {
+function toggleTheme() {
   colorMode.preference = nextTheme.value
 }
 
-const startViewTransition = (event: MouseEvent) => {
+function onClick(event: MouseEvent) {
   if (!document.startViewTransition) {
-    switchTheme()
+    toggleTheme()
     return
   }
 
@@ -21,11 +23,10 @@ const startViewTransition = (event: MouseEvent) => {
   )
 
   const transition = document.startViewTransition(() => {
-    switchTheme()
+    toggleTheme()
   })
 
   transition.ready.then(() => {
-    const duration = 600
     document.documentElement.animate(
       {
         clipPath: [
@@ -34,8 +35,8 @@ const startViewTransition = (event: MouseEvent) => {
         ]
       },
       {
-        duration: duration,
-        easing: 'cubic-bezier(.76,.32,.29,.99)',
+        duration: 520,
+        easing: 'cubic-bezier(0.2, 0.9, 0.2, 1)',
         pseudoElement: '::view-transition-new(root)'
       }
     )
@@ -45,17 +46,20 @@ const startViewTransition = (event: MouseEvent) => {
 
 <template>
   <ClientOnly>
-    <UButton
+    <Button
       :aria-label="`Switch to ${nextTheme} mode`"
-      :icon="`i-lucide-${nextTheme === 'dark' ? 'sun' : 'moon'}`"
-      color="neutral"
       variant="ghost"
-      size="sm"
+      size="icon-sm"
       class="rounded-full"
-      @click="startViewTransition"
-    />
+      @click="onClick"
+    >
+      <UIcon
+        :name="`i-lucide-${nextTheme === 'dark' ? 'moon' : 'sun'}`"
+        class="size-4"
+      />
+    </Button>
     <template #fallback>
-      <div class="size-4" />
+      <div class="size-8" />
     </template>
   </ClientOnly>
 </template>
@@ -70,6 +74,7 @@ const startViewTransition = (event: MouseEvent) => {
 ::view-transition-new(root) {
   z-index: 9999;
 }
+
 ::view-transition-old(root) {
   z-index: 1;
 }
