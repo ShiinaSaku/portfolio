@@ -15,9 +15,3 @@ jobs:
         with:
           node-version: "25.x"
       - run: pnpm install
-      - run: pnpm run build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./.output/public
-  
