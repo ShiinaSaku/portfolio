@@ -14,7 +14,10 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: "24.x"
-      - run: NUXT_APP_BASE_URL=/portfolio/ pnpx nuxt build --preset github_pages
+      - run: pnpm i
+      - run: pnpx nuxt build --preset github_pages
+        env:
+           NUXT_APP_BASE_URL: /portfolio/   
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
