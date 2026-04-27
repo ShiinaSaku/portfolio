@@ -1,14 +1,13 @@
-name: Auto-update GitHub Actions
+name: Update GitHub Actions (PR)
 
 on:
   schedule:
-    - cron: "0 3 * * 1"   # every Monday
+    - cron: "0 3 * * 1"   # weekly
   workflow_dispatch:
 
 permissions:
   contents: write
   pull-requests: write
-  workflows: write
 
 jobs:
   update-actions:
@@ -23,20 +22,28 @@ jobs:
         with:
           node-version: 24
 
-      - name: Run actions-up (update ALL including major)
+      - name: Run actions-up (update everything)
         run: npx actions-up --yes --mode major --style sha
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit changes
-        run: |
-          git config user.name "actions-up bot"
-          git config user.email "actions@github.com"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: actions-up/updates
+          commit-message: "chore: update GitHub Actions (actions-up)"
+          title: "chore: update GitHub Actions"
+          body: |
+            Automated updates using actions-up.
 
-          if [[ -n "$(git status --porcelain)" ]]; then
-            git add .
-            git commit -m "chore: update GitHub Actions (actions-up)"
-            git push
-          else
-            echo "No updates"
-          fi
+            - Includes major updates
+            - Pinned to commit SHAs for security
+
+            Run locally:
+            ```bash
+            npx actions-up
+            ```
+          labels: |
+            dependencies
+            github-actions
+      
